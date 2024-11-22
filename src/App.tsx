@@ -9,18 +9,9 @@ function App() {
     useState<TransactionData | null>(null);
   const geminiApiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
-  // Determine base URL based on hostname
-  const isLocalhost =
-    window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1";
-  const baseUrl = isLocalhost
-    ? "http://localhost:5173/trapeza-v1-demo/"
-    : "https://mersdev.github.io/trapeza-v1-demo/";
-
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        // Use the correct path based on environment
         const response = await fetch("transactions.json");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -45,7 +36,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Router basename={isLocalhost ? "/trapeza-v1-demo" : "/trapeza-v1-demo"}>
+      <Router basename="/trapeza-v1-demo">
         <Routes>
           <Route
             path="/"

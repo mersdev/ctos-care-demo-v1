@@ -5,17 +5,30 @@ import { TransactionData } from "./types/financial";
 import "./App.css";
 
 function App() {
-  const [transactionData, setTransactionData] = useState<TransactionData | null>(null);
+  const [transactionData, setTransactionData] =
+    useState<TransactionData | null>(null);
   const geminiApiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+  // Determine base URL based on hostname
+  const isLocalhost =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1";
+  const baseUrl = isLocalhost
+    ? "http://localhost:5173/trapeza-v1-demo/"
+    : "https://mersdev.github.io/trapeza-v1-demo/";
 
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await fetch('/transactions.json');
+        // Use the correct path based on environment
+        const response = await fetch("transactions.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
-        setTransactionData(data as TransactionData);
+        setTransactionData(data);
       } catch (error) {
-        console.error('Error fetching transactions:', error);
+        console.error("Error fetching transactions:", error);
       }
     };
 
@@ -32,7 +45,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Router>
+      <Router basename={isLocalhost ? "/trapeza-v1-demo" : "/trapeza-v1-demo"}>
         <Routes>
           <Route
             path="/"

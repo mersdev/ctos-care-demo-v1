@@ -1,0 +1,705 @@
+{
+  "account_holder": {
+    "age": 25,
+    "occupation": "Software Engineer & Tech Entrepreneur",
+    "location": "Kuala Lumpur"
+  },
+  "transactions": [
+    {
+      "id": "t1006",
+      "date": "2024-01-15",
+      "description": "Senior Software Engineer Salary",
+      "category": "Income",
+      "amount": 12000.0,
+      "type": "credit"
+    },
+    {
+      "id": "t1005",
+      "date": "2024-01-15",
+      "description": "Stock Portfolio Dividends",
+      "category": "Investment Income",
+      "amount": 3500.0,
+      "type": "credit"
+    },
+    {
+      "id": "t1004",
+      "date": "2024-01-15",
+      "description": "Enterprise Software Sales",
+      "category": "Business Income",
+      "amount": 1800.0,
+      "type": "credit"
+    },
+    {
+      "id": "t1003",
+      "date": "2024-01-15",
+      "description": "Investment Property Income",
+      "category": "Rental Income",
+      "amount": 600.0,
+      "type": "credit"
+    },
+    {
+      "id": "t1002",
+      "date": "2024-01-15",
+      "description": "Corporate Training Services",
+      "category": "Consulting Income",
+      "amount": 1200.0,
+      "type": "credit"
+    },
+    {
+      "id": "t1001",
+      "date": "2024-01-15",
+      "description": "Tech Patent Royalties",
+      "category": "Intellectual Property",
+      "amount": 400.0,
+      "type": "credit"
+    },
+    {
+      "id": "t1000",
+      "date": "2024-01-15",
+      "description": "Monthly Salary",
+      "category": "Income",
+      "amount": 5000.0,
+      "type": "credit"
+    },
+    {
+      "id": "t999",
+      "date": "2024-01-15",
+      "description": "Car Loan Payment",
+      "category": "Transportation",
+      "amount": 500.0,
+      "type": "debit"
+    },
+    {
+      "id": "t998",
+      "date": "2024-01-15",
+      "description": "House Rental",
+      "category": "Housing",
+      "amount": 1200.0,
+      "type": "debit"
+    },
+    {
+      "id": "t997",
+      "date": "2024-01-15",
+      "description": "Insurance Premium",
+      "category": "Insurance",
+      "amount": 300.0,
+      "type": "debit"
+    },
+    {
+      "id": "t996",
+      "date": "2024-01-14",
+      "description": "Grab Food - Dinner",
+      "category": "Food",
+      "amount": 25.5,
+      "type": "debit"
+    },
+    {
+      "id": "t995",
+      "date": "2024-01-14",
+      "description": "Public Transport",
+      "category": "Transportation",
+      "amount": 5.4,
+      "type": "debit"
+    },
+    {
+      "id": "t994",
+      "date": "2024-01-14",
+      "description": "Coffee at Starbucks",
+      "category": "Food & Beverage",
+      "amount": 18.9,
+      "type": "debit"
+    },
+    {
+      "id": "t993",
+      "date": "2024-01-13",
+      "description": "Grocery Shopping - Jaya Grocer",
+      "category": "Groceries",
+      "amount": 156.75,
+      "type": "debit"
+    },
+    {
+      "id": "t992",
+      "date": "2024-01-13",
+      "description": "Mobile Phone Bill",
+      "category": "Utilities",
+      "amount": 80.0,
+      "type": "debit"
+    },
+    {
+      "id": "t991",
+      "date": "2024-01-13",
+      "description": "Internet Bill",
+      "category": "Utilities",
+      "amount": 129.0,
+      "type": "debit"
+    },
+    {
+      "id": "t990",
+      "date": "2024-01-12",
+      "description": "Lunch at Food Court",
+      "category": "Food",
+      "amount": 15.0,
+      "type": "debit"
+    },
+    {
+      "id": "t989",
+      "date": "2024-01-12",
+      "description": "Gym Membership",
+      "category": "Health & Fitness",
+      "amount": 120.0,
+      "type": "debit"
+    },
+    {
+      "id": "t988",
+      "date": "2024-01-12",
+      "description": "Netflix Subscription",
+      "category": "Entertainment",
+      "amount": 54.9,
+      "type": "debit"
+    },
+    {
+      "id": "t987",
+      "date": "2024-01-11",
+      "description": "Petrol - Shell",
+      "category": "Transportation",
+      "amount": 80.0,
+      "type": "debit"
+    },
+    {
+      "id": "t986",
+      "date": "2024-01-11",
+      "description": "Dinner with Friends",
+      "category": "Food",
+      "amount": 45.0,
+      "type": "debit"
+    },
+    {
+      "id": "t985",
+      "date": "2024-01-10",
+      "description": "Electricity Bill",
+      "category": "Utilities",
+      "amount": 150.0,
+      "type": "debit"
+    },
+    {
+      "id": "t984",
+      "date": "2024-01-10",
+      "description": "Water Bill",
+      "category": "Utilities",
+      "amount": 35.0,
+      "type": "debit"
+    },
+    {
+      "id": "t983",
+      "date": "2024-01-10",
+      "description": "Breakfast at Local Cafe",
+      "category": "Food",
+      "amount": 12.5,
+      "type": "debit"
+    },
+    {
+      "id": "t982",
+      "date": "2024-01-09",
+      "description": "Office Supplies",
+      "category": "Shopping",
+      "amount": 45.9,
+      "type": "debit"
+    },
+    {
+      "id": "t981",
+      "date": "2024-01-09",
+      "description": "Grab Ride",
+      "category": "Transportation",
+      "amount": 15.0,
+      "type": "debit"
+    },
+    {
+      "id": "t980",
+      "date": "2024-01-08",
+      "description": "Pharmacy - Personal Care",
+      "category": "Health",
+      "amount": 68.5,
+      "type": "debit"
+    },
+    {
+      "id": "t979",
+      "date": "2024-01-08",
+      "description": "Lunch Meeting",
+      "category": "Food",
+      "amount": 30.0,
+      "type": "debit"
+    },
+    {
+      "id": "t978",
+      "date": "2024-01-07",
+      "description": "Weekend Movie",
+      "category": "Entertainment",
+      "amount": 18.0,
+      "type": "debit"
+    },
+    {
+      "id": "t977",
+      "date": "2024-01-07",
+      "description": "Shopping Mall Parking",
+      "category": "Transportation",
+      "amount": 8.0,
+      "type": "debit"
+    },
+    {
+      "id": "t976",
+      "date": "2024-01-06",
+      "description": "Grocery Shopping - Tesco",
+      "category": "Groceries",
+      "amount": 189.45,
+      "type": "debit"
+    },
+    {
+      "id": "t975",
+      "date": "2024-01-06",
+      "description": "Mobile Game Purchase",
+      "category": "Entertainment",
+      "amount": 9.9,
+      "type": "debit"
+    },
+    {
+      "id": "t974",
+      "date": "2024-01-06",
+      "description": "Bubble Tea",
+      "category": "Food & Beverage",
+      "amount": 12.9,
+      "type": "debit"
+    },
+    {
+      "id": "t973",
+      "date": "2024-01-05",
+      "description": "Spotify Premium",
+      "category": "Entertainment",
+      "amount": 14.9,
+      "type": "debit"
+    },
+    {
+      "id": "t972",
+      "date": "2024-01-05",
+      "description": "Lunch at Mamak",
+      "category": "Food",
+      "amount": 8.5,
+      "type": "debit"
+    },
+    {
+      "id": "t971",
+      "date": "2024-01-05",
+      "description": "Public Transport",
+      "category": "Transportation",
+      "amount": 5.4,
+      "type": "debit"
+    },
+    {
+      "id": "t970",
+      "date": "2024-01-04",
+      "description": "Office Lunch",
+      "category": "Food",
+      "amount": 15.0,
+      "type": "debit"
+    },
+    {
+      "id": "t969",
+      "date": "2024-01-04",
+      "description": "Stationary",
+      "category": "Shopping",
+      "amount": 23.5,
+      "type": "debit"
+    },
+    {
+      "id": "t968",
+      "date": "2024-01-03",
+      "description": "Haircut",
+      "category": "Personal Care",
+      "amount": 35.0,
+      "type": "debit"
+    },
+    {
+      "id": "t967",
+      "date": "2024-01-03",
+      "description": "Dinner",
+      "category": "Food",
+      "amount": 22.0,
+      "type": "debit"
+    },
+    {
+      "id": "t966",
+      "date": "2024-01-02",
+      "description": "Books",
+      "category": "Education",
+      "amount": 89.9,
+      "type": "debit"
+    },
+    {
+      "id": "t965",
+      "date": "2024-01-02",
+      "description": "Coffee",
+      "category": "Food & Beverage",
+      "amount": 12.0,
+      "type": "debit"
+    },
+    {
+      "id": "t964",
+      "date": "2024-01-01",
+      "description": "New Year Dinner",
+      "category": "Food",
+      "amount": 150.0,
+      "type": "debit"
+    },
+    {
+      "id": "t963",
+      "date": "2023-12-31",
+      "description": "Grab Ride",
+      "category": "Transportation",
+      "amount": 25.0,
+      "type": "debit"
+    },
+    {
+      "id": "t962",
+      "date": "2023-12-31",
+      "description": "Shopping - New Year's Eve",
+      "category": "Shopping",
+      "amount": 250.0,
+      "type": "debit"
+    },
+    {
+      "id": "t961",
+      "date": "2023-12-30",
+      "description": "Weekend Brunch",
+      "category": "Food",
+      "amount": 45.0,
+      "type": "debit"
+    },
+    {
+      "id": "t960",
+      "date": "2023-12-30",
+      "description": "Cinema",
+      "category": "Entertainment",
+      "amount": 38.0,
+      "type": "debit"
+    },
+    {
+      "id": "t959",
+      "date": "2023-12-29",
+      "description": "Grocery Shopping",
+      "category": "Groceries",
+      "amount": 134.5,
+      "type": "debit"
+    },
+    {
+      "id": "t958",
+      "date": "2023-12-29",
+      "description": "Public Transport",
+      "category": "Transportation",
+      "amount": 5.4,
+      "type": "debit"
+    },
+    {
+      "id": "t957",
+      "date": "2023-12-28",
+      "description": "Office Lunch",
+      "category": "Food",
+      "amount": 16.5,
+      "type": "debit"
+    },
+    {
+      "id": "t956",
+      "date": "2023-12-28",
+      "description": "Coffee",
+      "category": "Food & Beverage",
+      "amount": 13.9,
+      "type": "debit"
+    },
+    {
+      "id": "t955",
+      "date": "2023-12-27",
+      "description": "Phone Screen Repair",
+      "category": "Maintenance",
+      "amount": 280.0,
+      "type": "debit"
+    },
+    {
+      "id": "t954",
+      "date": "2023-12-27",
+      "description": "Lunch",
+      "category": "Food",
+      "amount": 18.0,
+      "type": "debit"
+    },
+    {
+      "id": "t953",
+      "date": "2023-12-26",
+      "description": "Boxing Day Shopping",
+      "category": "Shopping",
+      "amount": 350.0,
+      "type": "debit"
+    },
+    {
+      "id": "t952",
+      "date": "2023-12-25",
+      "description": "Christmas Dinner",
+      "category": "Food",
+      "amount": 180.0,
+      "type": "debit"
+    },
+    {
+      "id": "t951",
+      "date": "2023-12-25",
+      "description": "Gift Shopping",
+      "category": "Shopping",
+      "amount": 300.0,
+      "type": "debit"
+    },
+    {
+      "id": "t950",
+      "date": "2023-12-24",
+      "description": "Grab Ride",
+      "category": "Transportation",
+      "amount": 22.0,
+      "type": "debit"
+    },
+    {
+      "id": "t949",
+      "date": "2023-12-24",
+      "description": "Christmas Eve Dinner",
+      "category": "Food",
+      "amount": 120.0,
+      "type": "debit"
+    },
+    {
+      "id": "t948",
+      "date": "2023-12-23",
+      "description": "Grocery Shopping",
+      "category": "Groceries",
+      "amount": 145.6,
+      "type": "debit"
+    },
+    {
+      "id": "t947",
+      "date": "2023-12-23",
+      "description": "Public Transport",
+      "category": "Transportation",
+      "amount": 5.4,
+      "type": "debit"
+    },
+    {
+      "id": "t946",
+      "date": "2023-12-22",
+      "description": "Office Lunch",
+      "category": "Food",
+      "amount": 17.5,
+      "type": "debit"
+    },
+    {
+      "id": "t945",
+      "date": "2023-12-22",
+      "description": "Coffee",
+      "category": "Food & Beverage",
+      "amount": 12.9,
+      "type": "debit"
+    },
+    {
+      "id": "t944",
+      "date": "2023-12-21",
+      "description": "Team Dinner",
+      "category": "Food",
+      "amount": 65.0,
+      "type": "debit"
+    },
+    {
+      "id": "t943",
+      "date": "2023-12-21",
+      "description": "Public Transport",
+      "category": "Transportation",
+      "amount": 5.4,
+      "type": "debit"
+    },
+    {
+      "id": "t942",
+      "date": "2023-12-20",
+      "description": "Lunch",
+      "category": "Food",
+      "amount": 15.9,
+      "type": "debit"
+    },
+    {
+      "id": "t941",
+      "date": "2023-12-20",
+      "description": "Office Supplies",
+      "category": "Shopping",
+      "amount": 28.5,
+      "type": "debit"
+    },
+    {
+      "id": "t940",
+      "date": "2023-12-19",
+      "description": "Dinner",
+      "category": "Food",
+      "amount": 22.0,
+      "type": "debit"
+    },
+    {
+      "id": "t939",
+      "date": "2023-12-19",
+      "description": "Public Transport",
+      "category": "Transportation",
+      "amount": 5.4,
+      "type": "debit"
+    },
+    {
+      "id": "t938",
+      "date": "2023-12-18",
+      "description": "Grocery Shopping",
+      "category": "Groceries",
+      "amount": 167.8,
+      "type": "debit"
+    },
+    {
+      "id": "t937",
+      "date": "2023-12-15",
+      "description": "Tech Startup Revenue",
+      "category": "Business Income",
+      "amount": 23000.0,
+      "type": "credit"
+    },
+    {
+      "id": "t936",
+      "date": "2023-12-15",
+      "description": "Software Consultancy",
+      "category": "Consulting Income",
+      "amount": 14000.0,
+      "type": "credit"
+    },
+    {
+      "id": "t935",
+      "date": "2023-12-15",
+      "description": "Real Estate Rental Income",
+      "category": "Rental Income",
+      "amount": 8000.0,
+      "type": "credit"
+    },
+    {
+      "id": "t934",
+      "date": "2023-12-15",
+      "description": "Tech Course Revenue",
+      "category": "Education Income",
+      "amount": 4500.0,
+      "type": "credit"
+    },
+    {
+      "id": "t933",
+      "date": "2023-12-15",
+      "description": "Senior Software Engineer Salary",
+      "category": "Income",
+      "amount": 12000.0,
+      "type": "credit"
+    },
+    {
+      "id": "t932",
+      "date": "2023-12-15",
+      "description": "Stock Portfolio Dividends",
+      "category": "Investment Income",
+      "amount": 3200.0,
+      "type": "credit"
+    },
+    {
+      "id": "t931",
+      "date": "2023-12-15",
+      "description": "Enterprise Software Sales",
+      "category": "Business Income",
+      "amount": 16000.0,
+      "type": "credit"
+    },
+    {
+      "id": "t930",
+      "date": "2023-12-15",
+      "description": "Investment Property Income",
+      "category": "Rental Income",
+      "amount": 6000.0,
+      "type": "credit"
+    },
+    {
+      "id": "t929",
+      "date": "2023-12-15",
+      "description": "Corporate Training Services",
+      "category": "Consulting Income",
+      "amount": 11000.0,
+      "type": "credit"
+    },
+    {
+      "id": "t928",
+      "date": "2023-12-15",
+      "description": "Tech Patent Royalties",
+      "category": "Intellectual Property",
+      "amount": 4000.0,
+      "type": "credit"
+    },
+    {
+      "id": "t927",
+      "date": "2023-12-15",
+      "description": "Internet Bill",
+      "category": "Utilities",
+      "amount": 129.0,
+      "type": "debit"
+    },
+    {
+      "id": "t926",
+      "date": "2023-12-15",
+      "description": "Mobile Phone Bill",
+      "category": "Utilities",
+      "amount": 80.0,
+      "type": "debit"
+    },
+    {
+      "id": "t925",
+      "date": "2023-12-15",
+      "description": "Gym Membership",
+      "category": "Health & Fitness",
+      "amount": 120.0,
+      "type": "debit"
+    },
+    {
+      "id": "t924",
+      "date": "2023-12-15",
+      "description": "Netflix Subscription",
+      "category": "Entertainment",
+      "amount": 54.9,
+      "type": "debit"
+    },
+    {
+      "id": "t923",
+      "date": "2023-12-15",
+      "description": "Spotify Premium",
+      "category": "Entertainment",
+      "amount": 14.9,
+      "type": "debit"
+    },
+    {
+      "id": "t922",
+      "date": "2023-12-14",
+      "description": "Lunch",
+      "category": "Food",
+      "amount": 16.5,
+      "type": "debit"
+    },
+    {
+      "id": "t921",
+      "date": "2023-12-14",
+      "description": "Public Transport",
+      "category": "Transportation",
+      "amount": 5.4,
+      "type": "debit"
+    },
+    {
+      "id": "t920",
+      "date": "2023-12-13",
+      "description": "Dinner",
+      "category": "Food",
+      "amount": 25.0,
+      "type": "debit"
+    }
+  ]
+}

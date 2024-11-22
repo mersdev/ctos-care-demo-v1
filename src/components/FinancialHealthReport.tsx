@@ -97,10 +97,10 @@ export const FinancialHealthReport: React.FC<Props> = ({ transactionData, gemini
 
   if (loading) {
     return (
-      <div className="min-h-screen w-full bg-white p-8">
+      <div className="min-h-screen w-full bg-white px-2 py-4 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header Skeleton */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-4 sm:mb-6 lg:mb-8">
             <div className="h-10 w-64 bg-gray-100 rounded-lg animate-pulse mx-auto mb-4"></div>
             <div className="h-6 w-96 bg-gray-100 rounded-lg animate-pulse mx-auto"></div>
           </div>
@@ -213,78 +213,94 @@ export const FinancialHealthReport: React.FC<Props> = ({ transactionData, gemini
   }
 
   return (
-    <div className="min-h-screen w-full bg-white p-8">
+    <div className="min-h-screen w-full bg-white px-2 py-4 sm:px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+        {/* Header */}
+        <div className="text-center mb-4 sm:mb-6 lg:mb-8">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             Financial Health Report
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 px-2">
             A comprehensive analysis of your financial well-being
           </p>
         </div>
 
         {/* Health Score */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
-          <div className="flex">
-            {/* Score - Left side (30%) */}
-            <div className="w-3/10 border-r border-gray-200 pr-6">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Financial Health Score</h2>
-              <div className="flex items-baseline">
-                <div className="text-7xl font-bold text-blue-600">{aiInsights.score}</div>
-                <div className="text-3xl text-gray-500 ml-2">/100</div>
+        <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4 md:p-6 mb-4 sm:mb-6">
+          <div className="flex flex-col md:flex-row">
+            {/* Score */}
+            <div className="w-full md:w-1/3 border-b md:border-b-0 md:border-r border-gray-200 pb-4 md:pb-0 md:pr-6 mb-4 md:mb-0">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-3 text-center md:text-left">
+                Financial Health Score
+              </h2>
+              <div className="flex items-baseline justify-center md:justify-start">
+                <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-blue-600">
+                  {aiInsights.score}
+                </div>
+                <div className="text-xl sm:text-2xl md:text-3xl text-gray-500 ml-2">/100</div>
               </div>
             </div>
             
-            {/* Analysis - Right side (70%) */}
-            <div className="w-7/10 pl-6">
-              <h3 className="text-xl font-medium text-gray-900 mb-3">Analysis</h3>
-              <p className="text-gray-600 text-lg leading-relaxed">{aiInsights.analysis}</p>
+            {/* Analysis */}
+            <div className="w-full md:w-2/3 md:pl-6">
+              <h3 className="text-base sm:text-lg md:text-xl font-medium text-gray-900 mb-2">
+                Analysis
+              </h3>
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+                {aiInsights.analysis}
+              </p>
             </div>
           </div>
         </div>
 
         {/* Key Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div className="bg-white rounded-lg shadow-sm p-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6">
+          {/* Net Worth */}
+          <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4">
             <div className="flex items-center">
-              <CurrencyDollarIcon className="h-8 w-8 text-blue-500" />
-              <div className="ml-4">
-                <p className="text-sm text-gray-600">Net Worth</p>
-                <p className="text-lg font-semibold text-gray-900">
+              <CurrencyDollarIcon className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-blue-500" />
+              <div className="ml-2 sm:ml-3">
+                <p className="text-xs sm:text-sm text-gray-600">Net Worth</p>
+                <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
                   RM{metrics.netWorth.toFixed(2)}
                 </p>
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-lg shadow-sm p-6">
+
+          {/* Monthly Income */}
+          <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4">
             <div className="flex items-center">
-              <ChartBarIcon className="h-8 w-8 text-green-500" />
-              <div className="ml-4">
-                <p className="text-sm text-gray-600">Monthly Income</p>
-                <p className="text-lg font-semibold text-gray-900">
+              <ChartBarIcon className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-green-500" />
+              <div className="ml-2 sm:ml-3">
+                <p className="text-xs sm:text-sm text-gray-600">Monthly Income</p>
+                <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
                   RM{metrics.incomeStability.monthlyIncome.toFixed(2)}
                 </p>
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-lg shadow-sm p-6">
+
+          {/* Savings Rate */}
+          <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4">
             <div className="flex items-center">
-              <ArrowTrendingUpIcon className="h-8 w-8 text-indigo-500" />
-              <div className="ml-4">
-                <p className="text-sm text-gray-600">Savings Rate</p>
-                <p className="text-lg font-semibold text-gray-900">
+              <ArrowTrendingUpIcon className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-indigo-500" />
+              <div className="ml-2 sm:ml-3">
+                <p className="text-xs sm:text-sm text-gray-600">Savings Rate</p>
+                <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
                   {metrics.budgetAnalysis.savingsRate.toFixed(1)}%
                 </p>
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-lg shadow-sm p-6">
+
+          {/* Debt-to-Income */}
+          <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4">
             <div className="flex items-center">
-              <CreditCardIcon className="h-8 w-8 text-red-500" />
-              <div className="ml-4">
-                <p className="text-sm text-gray-600">Debt-to-Income</p>
-                <p className="text-lg font-semibold text-gray-900">
+              <CreditCardIcon className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-red-500" />
+              <div className="ml-2 sm:ml-3">
+                <p className="text-xs sm:text-sm text-gray-600">Debt-to-Income</p>
+                <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
                   {metrics.debtManagement.debtToIncomeRatio.toFixed(1)}%
                 </p>
               </div>
@@ -293,36 +309,41 @@ export const FinancialHealthReport: React.FC<Props> = ({ transactionData, gemini
         </div>
 
         {/* Sankey Chart */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4 md:p-6 mb-4 sm:mb-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4">
             Money Flow Analysis
           </h2>
-          <div className="h-[500px]">
+          <div className="h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px]">
             <ResponsiveSankey
               data={sankeyData}
-              margin={{ top: 40, right: 160, bottom: 40, left: 50 }}
+              margin={{ 
+                top: 10,
+                right: window.innerWidth < 640 ? 10 : 20,
+                bottom: 10,
+                left: window.innerWidth < 640 ? 10 : 20
+              }}
               align="justify"
               colors={{ scheme: "category10" }}
               nodeOpacity={1}
               nodeHoverOthersOpacity={0.35}
-              nodeThickness={18}
-              nodeSpacing={24}
+              nodeThickness={window.innerWidth < 640 ? 12 : 18}
+              nodeSpacing={window.innerWidth < 640 ? 12 : 24}
               nodeBorderWidth={0}
               nodeBorderRadius={3}
               linkOpacity={0.5}
               linkHoverOthersOpacity={0.1}
-              linkContract={3}
+              linkContract={window.innerWidth < 640 ? 1 : 3}
               enableLinkGradient={true}
               labelPosition="outside"
               labelOrientation="horizontal"
-              labelPadding={16}
+              labelPadding={window.innerWidth < 640 ? 8 : 16}
               labelTextColor={{ from: "color", modifiers: [["darker", 1]] }}
               animate={true}
               motionConfig="gentle"
               theme={{
                 background: "transparent",
                 text: {
-                  fontSize: 14,
+                  fontSize: window.innerWidth < 640 ? 10 : 12,
                   fill: '#374151'
                 }
               }}
@@ -331,53 +352,67 @@ export const FinancialHealthReport: React.FC<Props> = ({ transactionData, gemini
         </div>
 
         {/* Goals Section */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">AI-Generated Goals</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4 md:p-6 mb-4 sm:mb-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4">
+            AI-Generated Goals
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {/* Short Term Goals */}
-            <div className="border border-gray-100 rounded-lg p-4">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Short Term Goals (10 Days)</h3>
+            <div className="border border-gray-100 rounded-lg p-3 sm:p-4">
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">
+                Short Term Goals (10 Days)
+              </h3>
               {aiInsights.goals.shortTerm.objectives.map((objective, index) => (
-                <div key={index} className="mb-4">
-                  <h4 className="font-medium text-gray-800 mb-2">{objective.goal}</h4>
-                  <ul className="list-disc list-inside text-gray-600 space-y-1 mb-2">
+                <div key={index} className="mb-3">
+                  <h4 className="text-sm sm:text-base font-medium text-gray-800 mb-1 sm:mb-2">
+                    {objective.goal}
+                  </h4>
+                  <ul className="list-disc list-inside text-xs sm:text-sm text-gray-600 space-y-1 mb-1 sm:mb-2">
                     {objective.steps.map((step, stepIndex) => (
                       <li key={stepIndex}>{step}</li>
                     ))}
                   </ul>
-                  <p className="text-sm text-gray-500">Expected: {objective.expectedOutcome}</p>
+                  <p className="text-xs text-gray-500">Expected: {objective.expectedOutcome}</p>
                 </div>
               ))}
             </div>
 
             {/* Medium Term Goals */}
-            <div className="border border-gray-100 rounded-lg p-4">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Medium Term Goals (3 Months)</h3>
+            <div className="border border-gray-100 rounded-lg p-3 sm:p-4">
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">
+                Medium Term Goals (3 Months)
+              </h3>
               {aiInsights.goals.mediumTerm.objectives.map((objective, index) => (
-                <div key={index} className="mb-4">
-                  <h4 className="font-medium text-gray-800 mb-2">{objective.goal}</h4>
-                  <ul className="list-disc list-inside text-gray-600 space-y-1 mb-2">
+                <div key={index} className="mb-3">
+                  <h4 className="text-sm sm:text-base font-medium text-gray-800 mb-1 sm:mb-2">
+                    {objective.goal}
+                  </h4>
+                  <ul className="list-disc list-inside text-xs sm:text-sm text-gray-600 space-y-1 mb-1 sm:mb-2">
                     {objective.steps.map((step, stepIndex) => (
                       <li key={stepIndex}>{step}</li>
                     ))}
                   </ul>
-                  <p className="text-sm text-gray-500">Expected: {objective.expectedOutcome}</p>
+                  <p className="text-xs text-gray-500">Expected: {objective.expectedOutcome}</p>
                 </div>
               ))}
             </div>
 
             {/* Long Term Goals */}
-            <div className="border border-gray-100 rounded-lg p-4">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Long Term Goals (1 Year)</h3>
+            <div className="border border-gray-100 rounded-lg p-3 sm:p-4">
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">
+                Long Term Goals (1 Year)
+              </h3>
               {aiInsights.goals.longTerm.objectives.map((objective, index) => (
-                <div key={index} className="mb-4">
-                  <h4 className="font-medium text-gray-800 mb-2">{objective.goal}</h4>
-                  <ul className="list-disc list-inside text-gray-600 space-y-1 mb-2">
+                <div key={index} className="mb-3">
+                  <h4 className="text-sm sm:text-base font-medium text-gray-800 mb-1 sm:mb-2">
+                    {objective.goal}
+                  </h4>
+                  <ul className="list-disc list-inside text-xs sm:text-sm text-gray-600 space-y-1 mb-1 sm:mb-2">
                     {objective.steps.map((step, stepIndex) => (
                       <li key={stepIndex}>{step}</li>
                     ))}
                   </ul>
-                  <p className="text-sm text-gray-500">Expected: {objective.expectedOutcome}</p>
+                  <p className="text-xs text-gray-500">Expected: {objective.expectedOutcome}</p>
                 </div>
               ))}
             </div>
@@ -385,15 +420,19 @@ export const FinancialHealthReport: React.FC<Props> = ({ transactionData, gemini
         </div>
 
         {/* Recommendations */}
-        <div className="bg-white rounded-lg shadow-sm p-6">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">AI-Powered Recommendations</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="bg-white rounded-lg shadow-sm p-3 sm:p-4 md:p-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4">
+            AI-Powered Recommendations
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
             {Object.entries(aiInsights.recommendations).map(([key, value]) => (
-              <div key={key} className="border border-gray-100 rounded-lg p-4">
-                <h3 className="text-lg font-medium text-gray-900 mb-2 capitalize">
+              <div key={key} className="border border-gray-100 rounded-lg p-3 sm:p-4">
+                <h3 className="text-sm sm:text-base md:text-lg font-medium text-gray-900 mb-1 sm:mb-2 capitalize">
                   {key.replace(/([A-Z])/g, ' $1').trim()}
                 </h3>
-                <p className="text-gray-600">{value}</p>
+                <p className="text-xs sm:text-sm md:text-base text-gray-600">
+                  {value}
+                </p>
               </div>
             ))}
           </div>

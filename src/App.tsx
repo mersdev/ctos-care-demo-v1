@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Navbar } from "./components/layout";
 import { CTOSReport } from "./components/CTOSReport";
 import TaskView from "./components/task/TaskView";
@@ -13,10 +12,8 @@ import {
 import "./App.css";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<"report" | "chat">("report");
-
   // TODO: HARDCODE YOUR PREFERRED MODEL HERE: "groq" | "gemini" | "ollama"
-  const selectedModel: AIModelType = "ollama";
+  const selectedModel: AIModelType = "gemini";
 
   const geminiApiKey = import.meta.env.VITE_GEMINI_API_KEY?.trim() || undefined;
   const groqApiKey = import.meta.env.VITE_GROQ_API_KEY?.trim() || undefined;
@@ -37,16 +34,7 @@ function App() {
           <Navbar />
           <main className="flex-1 container mx-auto px-4 py-8">
             <Routes>
-              <Route
-                path="/"
-                element={
-                  currentPage === "report" ? (
-                    <CTOSReport {...config} />
-                  ) : (
-                    <ChatView />
-                  )
-                }
-              />
+              <Route path="/" element={<CTOSReport {...config} />} />
               <Route path="/tasks" element={<TaskView />} />
               <Route path="/chat" element={<ChatView />} />
               <Route path="*" element={<Navigate to="/" />} />

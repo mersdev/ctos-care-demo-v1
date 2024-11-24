@@ -69,7 +69,7 @@ export class CTOSCoreService implements CTOSService {
     try {
       // Fetch transactions
       const transactionsResponse = await fetch(
-        "ctos-care-demo-v1/bad/transactions.json"
+        "/ctos-care-demo-v1/bad/transactions.json"
       );
       if (!transactionsResponse.ok) {
         throw new Error(`HTTP error! status: ${transactionsResponse.status}`);
@@ -78,7 +78,7 @@ export class CTOSCoreService implements CTOSService {
 
       // Fetch personal info
       const personalInfoResponse = await fetch(
-        "ctos-care-demo-v1/bad/personal_info.json"
+        "/ctos-care-demo-v1/bad/personal_info.json"
       );
       if (!personalInfoResponse.ok) {
         throw new Error(`HTTP error! status: ${personalInfoResponse.status}`);

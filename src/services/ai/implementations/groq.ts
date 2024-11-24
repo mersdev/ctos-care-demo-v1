@@ -5,7 +5,6 @@ import { CTOSReport } from "../../../types/ctos";
 import {
   SystemPromptType,
   GenerateTextOptions,
-  CTOSReportSystemPrompt,
   ChatSystemPrompt,
 } from "../types/prompts";
 
@@ -20,7 +19,7 @@ export class GroqService extends BaseAIService {
     }
     this.client = new Groq({
       apiKey: config.apiKey.trim(),
-      dangerouslyAllowBrowser: true
+      dangerouslyAllowBrowser: true,
     });
   }
 
@@ -156,7 +155,10 @@ Required JSON Structure:
     return content;
   }
 
-  async generateText(prompt: string, options?: GenerateTextOptions): Promise<AIResponse> {
+  async generateText(
+    prompt: string,
+    options?: GenerateTextOptions
+  ): Promise<AIResponse> {
     try {
       const completion = await this.client.chat.completions.create({
         messages: [

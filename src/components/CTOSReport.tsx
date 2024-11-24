@@ -29,6 +29,7 @@ interface Props {
 interface CTOSReportProps {
   report?: CTOSReportType | null;
   onRegenerate: () => void;
+  isLoading: boolean;
 }
 
 const STORAGE_KEY = "ctosReport";
@@ -55,17 +56,18 @@ const LoadingSkeleton = () => (
   </div>
 );
 
-const FloatingButton = ({ onRegenerate }: { onRegenerate: () => void }) => (
+const FloatingButton = ({ onRegenerate, isLoading }: { onRegenerate: () => void; isLoading: boolean }) => (
   <button
     onClick={onRegenerate}
-    className="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200"
+    disabled={isLoading}
+    className={`fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${isLoading ? 'animate-pulse' : ''}`}
     aria-label="Regenerate Report"
   >
-    <ArrowPathIcon className="h-6 w-6" />
+    <ArrowPathIcon className={`h-6 w-6 ${isLoading ? 'animate-spin' : ''}`} />
   </button>
 );
 
-const CTOSReport: React.FC<CTOSReportProps> = ({ report, onRegenerate }) => {
+const CTOSReport: React.FC<CTOSReportProps> = ({ report, onRegenerate, isLoading }) => {
   if (!report) {
     return <LoadingSkeleton />;
   }
@@ -90,7 +92,7 @@ const CTOSReport: React.FC<CTOSReportProps> = ({ report, onRegenerate }) => {
         asPlaintiff={report.legalCases.asPlaintiff}
       />
       <TradeRefereesSection referees={report.tradeReferees} />
-      <FloatingButton onRegenerate={onRegenerate} />
+      <FloatingButton onRegenerate={onRegenerate} isLoading={isLoading} />
       <Toaster position="bottom-right" />
     </div>
   );
@@ -167,8 +169,9 @@ const CTOSReportContainer: React.FC<Props> = ({
   }, [fetchReport]);
 
   const handleRegenerate = async () => {
-    localStorage.removeItem(STORAGE_KEY);
-    await fetchReport();
+    localStorage.clear(); // Clear all localStorage data
+    setReport(null); // Clear current report to trigger re-render with loading state
+    await fetchReport(); // Fetch and generate new report
   };
 
   if (error) {
@@ -189,7 +192,7 @@ const CTOSReportContainer: React.FC<Props> = ({
 
   return (
     <div>
-      <CTOSReport report={report} onRegenerate={handleRegenerate} />
+      <CTOSReport report={report} onRegenerate={handleRegenerate} isLoading={isLoading} />
       {isLoading && <LoadingSkeleton />}
     </div>
   );

@@ -1,14 +1,13 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { ChatMessage, ChatState } from '../../types/chat';
-import { ChatService } from '../../services/chat-service';
-import { CTOSReport } from '../../types/ctos';
-import { v4 as uuidv4 } from 'uuid';
-import { PaperAirplaneIcon } from '@heroicons/react/24/outline';
-import { aiServiceFactory } from '../../services/ai';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import React, { useState, useRef, useEffect, useMemo } from "react";
+import { ChatMessage, ChatState } from "../../types/chat";
+import { ChatService } from "../../services/chat-service";
+import { v4 as uuidv4 } from "uuid";
+import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import { aiServiceFactory } from "../../services/ai";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-const STORAGE_KEY = 'ctosReport';
+const STORAGE_KEY = "ctosReport";
 
 const ChatView: React.FC = () => {
   const [state, setState] = useState<ChatState>({
@@ -16,7 +15,7 @@ const ChatView: React.FC = () => {
     isLoading: false,
     error: null,
   });
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -27,7 +26,7 @@ const ChatView: React.FC = () => {
     try {
       return JSON.parse(storedReport);
     } catch (error) {
-      console.error('Error parsing stored report:', error);
+      console.error("Error parsing stored report:", error);
       return null;
     }
   }).current;
@@ -42,7 +41,7 @@ const ChatView: React.FC = () => {
   }, []); // Empty dependency array means this will only run once
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -56,31 +55,31 @@ const ChatView: React.FC = () => {
     const userMessage: ChatMessage = {
       id: uuidv4(),
       content: input.trim(),
-      role: 'user',
+      role: "user",
       timestamp: new Date(),
     };
 
-    setState(prev => ({
+    setState((prev) => ({
       ...prev,
       messages: [...prev.messages, userMessage],
       isLoading: true,
       error: null,
     }));
-    setInput('');
+    setInput("");
 
     try {
       const response = await chatService.generateResponse(userMessage.content);
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         messages: [...prev.messages, response],
         isLoading: false,
       }));
     } catch (error) {
-      console.error('Chat response error:', error);
-      setState(prev => ({
+      console.error("Chat response error:", error);
+      setState((prev) => ({
         ...prev,
         isLoading: false,
-        error: 'Failed to generate response',
+        error: "Failed to generate response",
       }));
     }
   };
@@ -97,30 +96,34 @@ const ChatView: React.FC = () => {
           {state.messages.map((message) => (
             <div
               key={message.id}
-              className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'} animate-fadeIn`}
+              className={`flex ${
+                message.role === "user" ? "justify-end" : "justify-start"
+              } animate-fadeIn`}
             >
               <div
                 className={`
-                  ${message.role === 'user' ? 'max-w-[85%]' : 'w-[85%]'} 
+                  ${message.role === "user" ? "max-w-[85%]" : "w-[85%]"} 
                   rounded-lg shadow-sm
                   transform transition-all duration-200 ease-out
                   hover:shadow-md hover:-translate-y-0.5
                   ${
-                    message.role === 'user'
-                      ? 'bg-blue-500 text-white px-5 py-3 rounded-br-none animate-slideLeft'
-                      : 'bg-gray-50 text-gray-800 px-6 py-4 rounded-bl-none border border-gray-100 animate-slideRight'
+                    message.role === "user"
+                      ? "bg-blue-500 text-white px-5 py-3 rounded-br-none animate-slideLeft"
+                      : "bg-gray-50 text-gray-800 px-6 py-4 rounded-bl-none border border-gray-100 animate-slideRight"
                   }
                 `}
               >
                 <div className="flex flex-col">
-                  {message.role === 'user' ? (
+                  {message.role === "user" ? (
                     <div>
-                      <p className="text-sm leading-relaxed text-right">{message.content}</p>
+                      <p className="text-sm leading-relaxed text-right">
+                        {message.content}
+                      </p>
                       <p className="text-xs mt-2 text-blue-100 text-right">
-                        {new Date(message.timestamp).toLocaleTimeString([], { 
-                          hour: '2-digit',
-                          minute: '2-digit',
-                          hour12: true 
+                        {new Date(message.timestamp).toLocaleTimeString([], {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                          hour12: true,
                         })}
                       </p>
                     </div>
@@ -144,10 +147,10 @@ const ChatView: React.FC = () => {
                         {message.content}
                       </ReactMarkdown>
                       <p className="text-xs mt-2 text-gray-400 text-left">
-                        {new Date(message.timestamp).toLocaleTimeString([], { 
-                          hour: '2-digit',
-                          minute: '2-digit',
-                          hour12: true 
+                        {new Date(message.timestamp).toLocaleTimeString([], {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                          hour12: true,
                         })}
                       </p>
                     </div>

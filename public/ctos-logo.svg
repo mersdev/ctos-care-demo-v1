@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- C -->
+  <path d="M20 10C14.4772 10 10 14.4772 10 20C10 25.5228 14.4772 30 20 30C23.3019 30 26.2335 28.4119 28 26" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+  <!-- T -->
+  <path d="M40 10H60M50 10V30" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+  <!-- O -->
+  <circle cx="80" cy="20" r="10" stroke="#2563EB" stroke-width="3"/>
+  <!-- S -->
+  <path d="M100 15C100 12.2386 102.239 10 105 10C107.761 10 110 12.2386 110 15C110 17.7614 107.761 20 105 20H105C102.239 20 100 22.2386 100 25C100 27.7614 102.239 30 105 30C107.761 30 110 27.7614 110 25" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+</svg>

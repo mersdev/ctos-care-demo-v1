@@ -1,0 +1,372 @@
+{
+  "transactions": [
+    {
+      "id": "t1000",
+      "date": "2024-03-15",
+      "description": "Sales Executive Salary",
+      "category": "Income",
+      "amount": 3500.0,
+      "type": "credit"
+    },
+    {
+      "id": "t999",
+      "date": "2024-03-15",
+      "description": "Maybank Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 300.0,
+      "type": "debit"
+    },
+    {
+      "id": "t998",
+      "date": "2024-03-15",
+      "description": "CIMB Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 200.0,
+      "type": "debit"
+    },
+    {
+      "id": "t997",
+      "date": "2024-03-01",
+      "description": "Car Loan Payment",
+      "category": "Loan Payment",
+      "amount": 800.0,
+      "type": "debit"
+    },
+    {
+      "id": "t996",
+      "date": "2024-03-01",
+      "description": "Personal Loan Payment",
+      "category": "Loan Payment",
+      "amount": 0.0,
+      "type": "debit"
+    },
+    {
+      "id": "t995",
+      "date": "2024-02-20",
+      "description": "RHB Credit Card Application Fee",
+      "category": "Bank Charges",
+      "amount": 50.0,
+      "type": "debit"
+    },
+    {
+      "id": "t994",
+      "date": "2024-02-15",
+      "description": "Sales Executive Salary",
+      "category": "Income",
+      "amount": 3500.0,
+      "type": "credit"
+    },
+    {
+      "id": "t993",
+      "date": "2024-02-15",
+      "description": "Maybank Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 0.0,
+      "type": "debit"
+    },
+    {
+      "id": "t992",
+      "date": "2024-02-15",
+      "description": "CIMB Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 380.0,
+      "type": "debit"
+    },
+    {
+      "id": "t991",
+      "date": "2024-02-15",
+      "description": "Hong Leong Personal Loan Application",
+      "category": "Bank Charges",
+      "amount": 100.0,
+      "type": "debit"
+    },
+    {
+      "id": "t990",
+      "date": "2024-02-01",
+      "description": "Car Loan Payment",
+      "category": "Loan Payment",
+      "amount": 0.0,
+      "type": "debit"
+    },
+    {
+      "id": "t989",
+      "date": "2024-02-01",
+      "description": "Personal Loan Payment",
+      "category": "Loan Payment",
+      "amount": 300.0,
+      "type": "debit"
+    },
+    {
+      "id": "t988",
+      "date": "2024-01-30",
+      "description": "AmBank Credit Card Application Fee",
+      "category": "Bank Charges",
+      "amount": 50.0,
+      "type": "debit"
+    },
+    {
+      "id": "t987",
+      "date": "2024-01-15",
+      "description": "Sales Executive Salary",
+      "category": "Income",
+      "amount": 3500.0,
+      "type": "credit"
+    },
+    {
+      "id": "t986",
+      "date": "2024-01-15",
+      "description": "Maybank Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 400.0,
+      "type": "debit"
+    },
+    {
+      "id": "t985",
+      "date": "2024-01-15",
+      "description": "CIMB Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 0.0,
+      "type": "debit"
+    },
+    {
+      "id": "t984",
+      "date": "2024-01-01",
+      "description": "Car Loan Payment",
+      "category": "Loan Payment",
+      "amount": 1200.0,
+      "type": "debit"
+    },
+    {
+      "id": "t983",
+      "date": "2024-01-01",
+      "description": "Personal Loan Payment",
+      "category": "Loan Payment",
+      "amount": 600.0,
+      "type": "debit"
+    },
+    {
+      "id": "t982",
+      "date": "2023-12-15",
+      "description": "Sales Executive Salary",
+      "category": "Income",
+      "amount": 3500.0,
+      "type": "credit"
+    },
+    {
+      "id": "t981",
+      "date": "2023-12-15",
+      "description": "Maybank Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 690.0,
+      "type": "debit"
+    },
+    {
+      "id": "t980",
+      "date": "2023-12-15",
+      "description": "CIMB Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 200.0,
+      "type": "debit"
+    },
+    {
+      "id": "t979",
+      "date": "2023-12-01",
+      "description": "Car Loan Payment",
+      "category": "Loan Payment",
+      "amount": 1200.0,
+      "type": "debit"
+    },
+    {
+      "id": "t978",
+      "date": "2023-12-01",
+      "description": "Personal Loan Payment",
+      "category": "Loan Payment",
+      "amount": 600.0,
+      "type": "debit"
+    },
+    {
+      "id": "t977",
+      "date": "2023-11-15",
+      "description": "Sales Executive Salary",
+      "category": "Income",
+      "amount": 3500.0,
+      "type": "credit"
+    },
+    {
+      "id": "t976",
+      "date": "2023-11-15",
+      "description": "Maybank Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 500.0,
+      "type": "debit"
+    },
+    {
+      "id": "t975",
+      "date": "2023-11-15",
+      "description": "CIMB Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 300.0,
+      "type": "debit"
+    },
+    {
+      "id": "t974",
+      "date": "2023-11-01",
+      "description": "Car Loan Payment",
+      "category": "Loan Payment",
+      "amount": 1200.0,
+      "type": "debit"
+    },
+    {
+      "id": "t973",
+      "date": "2023-11-01",
+      "description": "Personal Loan Payment",
+      "category": "Loan Payment",
+      "amount": 600.0,
+      "type": "debit"
+    },
+    {
+      "id": "t972",
+      "date": "2023-10-15",
+      "description": "Sales Executive Salary",
+      "category": "Income",
+      "amount": 3500.0,
+      "type": "credit"
+    },
+    {
+      "id": "t971",
+      "date": "2023-10-15",
+      "description": "Maybank Credit Card Late Payment Fee",
+      "category": "Bank Charges",
+      "amount": 50.0,
+      "type": "debit"
+    },
+    {
+      "id": "t970",
+      "date": "2023-10-15",
+      "description": "Maybank Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 450.0,
+      "type": "debit"
+    },
+    {
+      "id": "t969",
+      "date": "2023-10-15",
+      "description": "CIMB Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 250.0,
+      "type": "debit"
+    },
+    {
+      "id": "t968",
+      "date": "2023-10-01",
+      "description": "Car Loan Payment",
+      "category": "Loan Payment",
+      "amount": 1000.0,
+      "type": "debit"
+    },
+    {
+      "id": "t967",
+      "date": "2023-10-01",
+      "description": "Personal Loan Payment",
+      "category": "Loan Payment",
+      "amount": 400.0,
+      "type": "debit"
+    },
+    {
+      "id": "t966",
+      "date": "2023-09-15",
+      "description": "Sales Executive Salary",
+      "category": "Income",
+      "amount": 3500.0,
+      "type": "credit"
+    },
+    {
+      "id": "t965",
+      "date": "2023-09-15",
+      "description": "Maybank Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 0.0,
+      "type": "debit"
+    },
+    {
+      "id": "t964",
+      "date": "2023-09-15",
+      "description": "CIMB Credit Card Late Payment Fee",
+      "category": "Bank Charges",
+      "amount": 50.0,
+      "type": "debit"
+    },
+    {
+      "id": "t963",
+      "date": "2023-09-15",
+      "description": "CIMB Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 0.0,
+      "type": "debit"
+    },
+    {
+      "id": "t962",
+      "date": "2023-09-01",
+      "description": "Car Loan Late Payment Fee",
+      "category": "Bank Charges",
+      "amount": 100.0,
+      "type": "debit"
+    },
+    {
+      "id": "t961",
+      "date": "2023-09-01",
+      "description": "Car Loan Payment",
+      "category": "Loan Payment",
+      "amount": 800.0,
+      "type": "debit"
+    },
+    {
+      "id": "t960",
+      "date": "2023-09-01",
+      "description": "Personal Loan Payment",
+      "category": "Loan Payment",
+      "amount": 300.0,
+      "type": "debit"
+    },
+    {
+      "id": "t959",
+      "date": "2023-08-15",
+      "description": "Sales Executive Salary",
+      "category": "Income",
+      "amount": 3500.0,
+      "type": "credit"
+    },
+    {
+      "id": "t958",
+      "date": "2023-08-15",
+      "description": "Maybank Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 350.0,
+      "type": "debit"
+    },
+    {
+      "id": "t957",
+      "date": "2023-08-15",
+      "description": "CIMB Credit Card Payment",
+      "category": "Credit Card",
+      "amount": 200.0,
+      "type": "debit"
+    },
+    {
+      "id": "t956",
+      "date": "2023-08-01",
+      "description": "Car Loan Payment",
+      "category": "Loan Payment",
+      "amount": 900.0,
+      "type": "debit"
+    },
+    {
+      "id": "t955",
+      "date": "2023-08-01",
+      "description": "Personal Loan Payment",
+      "category": "Loan Payment",
+      "amount": 400.0,
+      "type": "debit"
+    }
+  ]
+}

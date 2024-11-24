@@ -1,9 +1,4 @@
 {
-  "account_holder": {
-    "age": 25,
-    "occupation": "Software Engineer & Tech Entrepreneur",
-    "location": "Kuala Lumpur"
-  },
   "transactions": [
     {
       "id": "t1006",
